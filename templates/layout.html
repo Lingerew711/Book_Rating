@@ -18,20 +18,20 @@
 <body>
     <nav>
         <ul>
-
+          {% if session['logged_in']%}
           <li>
             <a href="#"><i class="fa fa-user-circle fa-lg"></i> &nbsp;{{session['username']}}</a>
           </li>
-         
+          {% endif %}
           <li><a href="{{url_for('search')}}">Search</a></li>
-        
+          {% if not session['logged_in']%}
           <li><a href="{{url_for('login')}}">Login</a></li>
           <li><a href="{{url_for('register')}}">Sign up</a></li>
-          
+          {%else%}
           <li><a href="{{url_for('logout')}}">Logout</a></li>
-          
+          {% endif %}
         </ul>
       </nav>
-     
+      {% block template %}{%endblock%}
 </body>
 </html>
