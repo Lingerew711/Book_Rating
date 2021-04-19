@@ -16,6 +16,22 @@
     <title>{%block title%}{%endblock%}</title>
 </head>
 <body>
-    
+    <nav>
+        <ul>
+
+          <li>
+            <a href="#"><i class="fa fa-user-circle fa-lg"></i> &nbsp;{{session['username']}}</a>
+          </li>
+         
+          <li><a href="{{url_for('search')}}">Search</a></li>
+        
+          <li><a href="{{url_for('login')}}">Login</a></li>
+          <li><a href="{{url_for('register')}}">Sign up</a></li>
+          
+          <li><a href="{{url_for('logout')}}">Logout</a></li>
+          
+        </ul>
+      </nav>
+     
 </body>
 </html>
