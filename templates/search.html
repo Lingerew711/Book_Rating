@@ -3,6 +3,16 @@
   rel="stylesheet"
   href="{{ url_for('static',filename='css/search.css')}}"
 />
+<style>
+    body {
+      background-image: linear-gradient(
+          to right,
+          rgba(13, 6, 54, 0.219),
+          rgba(43, 5, 5, 0.123)
+        ),
+        url("{{url_for('static',filename='images/shelf.jpg')}}");
+    }
+  </style>
 <div class="container">
     <form action="/books">
       <div class="search">
