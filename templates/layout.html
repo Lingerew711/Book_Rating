@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="{{url_for('static',filename='img/logo.png')}}" type="image/x-icon"/>
+    <link rel="shortcut icon" type="image/jpg" href="{{url_for('static',filename='images/brand.png')}}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/bootstrap.min.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/base.css')}}"/>
     <title>{%block title%}{%endblock%}</title>
 </head>
 <body>
