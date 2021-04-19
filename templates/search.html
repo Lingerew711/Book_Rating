@@ -3,4 +3,22 @@
   rel="stylesheet"
   href="{{ url_for('static',filename='css/search.css')}}"
 />
-{%endblock%}
+<div class="container">
+    <form action="/books">
+      <div class="search">
+        <img src="{{url_for('static',filename='images/brand.png')}}" alt="logo" />
+  
+        <input
+          type="text"
+          class="form-control"
+          name="search"
+          placeholder="Search your Book"
+          required
+        />
+        <button class="btn">Search</button>
+      </div>
+    </form>
+<div>
+    {%endblock%}
+</div>
+</div>
