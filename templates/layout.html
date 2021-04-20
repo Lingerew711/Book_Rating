@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/jpg" href="{{url_for('static',filename='images/brand.png')}}"/>
+
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
     <link
       rel="stylesheet"
       href="{{ url_for('static',filename='css/bootstrap.min.css')}}"
@@ -23,12 +31,12 @@
             <a href="#"><i class="fa fa-user-circle fa-lg"></i> &nbsp;{{session['username']}}</a>
           </li>
           {% endif %}
-          <li><a href="{{url_for('search')}}">Search</a></li>
+          <li><a href="#">Search</a></li>
           {% if not session['logged_in']%}
-          <li><a href="{{url_for('login')}}">Login</a></li>
-          <li><a href="{{url_for('register')}}">Sign up</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Sign up</a></li>
           {%else%}
-          <li><a href="{{url_for('logout')}}">Logout</a></li>
+          <li><a href="#">Logout</a></li>
           {% endif %}
         </ul>
       </nav>
