@@ -4,9 +4,9 @@
     <div class="right">
       <div class="login-box bg-dark">
         <h3 align="center">Login</h3>
-        
-        <div class="error"></div>
-        
+        {% if message %}
+        <div class="error">{{message}}</div>
+        {%endif%}
         <div class="login">
           <form method="POST" action="{{ url_for('login', next=next) }}">
             <div class="form-group border-bottom border-warning ">
