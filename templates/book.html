@@ -2,84 +2,90 @@
 {{obj_book.author}}{%endif%}{%endblock%}{%block template%}
 
 <div class="main">
-    <form action="/books">
-        <div class="search-box">
-          <div>
-            <a href="{{url_for('search')}}">
-              <img src="{{url_for('static',filename='images/brand.png')}}" alt="logo"
-            /></a>
-          </div>
-    
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Search your Book"
-            name="search"
-          />
-          <div><button class="btn">Search</button></div>
-        </div>
-      </form>
+  <form action="/books">
+    <div class="search-box">
+      <div>
+        <a href="{{url_for('search')}}">
+          <img
+            src="{{url_for('static',filename='images/brand.png')}}"
+            alt="logo"
+        /></a>
+      </div>
 
-      <div class="container mt-5">
-        {% if obj_book %}
-        <div class="info-section">
-            <div class="info">
-              <img src="{{url_for('static',filename='images/boook.jpg')}}" alt="logo">
-              <h2>{{obj_book.title}}</h2>
-              <p>{{obj_book.author}} | {{obj_book.year}} | {{obj_book.isbn}}</p>
-            </div>
-            {% if not(error) %}
-            <div class="rating">
-              <img
-                src="{{url_for('static',filename='images/goodreads.png')}}"
-                alt="logo"
-              />
-              <p align="center">
-                Rating {{rating}} / 5 by {{count}} people
-              </p>
-            </div>
-            {%endif%}
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search your Book"
+        name="search"
+      />
+      <div><button class="btn">Search</button></div>
+    </div>
+  </form>
+
+  <div class="container mt-5">
+    {% if obj_book %}
+    <div class="info-section">
+      <div class="info">
+        <img
+          src="{{url_for('static',filename='images/boook.jpg')}}"
+          alt="logo"
+        />
+        <h2>{{obj_book.title}}</h2>
+        <p>{{obj_book.author}} | {{obj_book.year}} | {{obj_book.isbn}}</p>
+      </div>
+      {% if not(error) %}
+      <div class="rating">
+        <img
+          src="{{url_for('static',filename='images/goodreads.png')}}"
+          alt="logo"
+        />
+        <p align="center">Rating {{rating}} / 5 by {{count}} people</p>
+      </div>
+      {%endif%}
+    </div>
+    {% if session['logged_in'] and not(is_reviewed) %}
+    <hr />
+    <form action="{{url_for('book',isbn=obj_book.isbn)}}" method="POST">
+      <input type="hidden" name="book_id" value="{{obj_book.id}}" />
+      <div class="myreview-box">
+        {%if message %}
+        <div class="error">{{message}}</div>
+        {%endif%}
+        <div class="myreview">
+          <div class="mt-4 mx-4">
+            <label for="select">Rating</label>
+            <select id="select" class="form-control" name="rating">
+              <option>5</option>
+              <option>4</option>
+              <option>3</option>
+              <option>2</option>
+              <option>1</option>
+            </select>
           </div>
-          {% if session['logged_in'] and not(is_reviewed) %}
-          <hr />
-          <form action="{{url_for('book',isbn=obj_book.isbn)}}" method="POST">
-            <input type="hidden" name="book_id" value="{{obj_book.id}}" />
-            <div class="myreview-box">
-              {%if message %}
-              <div class="error">
-                {{message}}
-              </div>
-              {%endif%}
-              <div class="myreview">
-                <div class="mt-4 mx-4">
-                  <label for="select">Rating</label>
-                  <select id="select" class="form-control" name="rating">
-                    <option>5</option>
-                    <option>4</option>
-                    <option>3</option>
-                    <option>2</option>
-                    <option>1</option>
-                  </select>
-                </div>
-                <div class="form-group mt-4 mx-4">
-                  <label for="exampleFormControlTextarea1">Review</label>
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="2"
-                    name="review"
-                    placeholder="Write your review..."
-                  ></textarea>
-                </div>
-              </div>
-              <input type="text" placeholder="" id="review_isbn"  name="review_isbn"
-                      value="{{obj_book.isbn}}">
-              <div class="button">
-                <button class="btn m-3">Submit</button>
-              </div>
-            </div>
-          </form>
-          {%elif not( session['logged_in'])%}
+          <div class="form-group mt-4 mx-4">
+            <label for="exampleFormControlTextarea1">Review</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="2"
+              name="review"
+              placeholder="Write your review..."
+            ></textarea>
+          </div>
+        </div>
+        <input
+          type="text"
+          placeholder=""
+          id="review_isbn"
+          name="review_isbn"
+          value="{{obj_book.isbn}}"
+        />
+        <div class="button">
+          <button class="btn m-3">Submit</button>
+        </div>
+      </div>
+    </form>
+    {%elif not( session['logged_in'])%}
     <hr />
     <div class="login-msg">
       <a href="{{url_for('login', next=obj_book.isbn)}}">Login</a> or
@@ -101,7 +107,7 @@
     {%else%}
     <div class="error">404 Not Found</div>
     {%endif%}
-      </div>
+  </div>
 </div>
 
 {%endblock%}
