@@ -1,4 +1,24 @@
 {% extends 'layout.html' %} {%block title%}Login{%endblock%} {% block template %}
+
+<style>
+    body {
+      background-image: linear-gradient(
+          to right,
+          rgba(13, 6, 54, 0.219),
+          rgba(43, 5, 5, 0.123)
+        ),
+        url("{{url_for('static',filename='images/shelf.jpg')}}");
+    }
+    .left{
+      background-repeat: no-repeat;
+      background-image: linear-gradient(
+          to right,
+          rgba(13, 6, 54, 0.219),
+          rgba(43, 5, 5, 0.123)
+        ),
+        url("{{url_for('static',filename='images/baby.png')}}");
+    }
+  </style>
 <div class="mycontainer"> 
     <div class="left"></div>
     <div class="right">
