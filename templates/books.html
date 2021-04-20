@@ -18,5 +18,35 @@
           <div><button class="btn">Search</button></div>
         </div>
       </form>
+
+      <div class="results">
+        <p>{{count}} results found for {{q}}</p>
+        {%if message %}
+        <div class="error">
+          {{message}}
+        </div>
+        {%endif%}
+        <div class="boxs row">
+          {%if obj_books%} {% for book in obj_books %}
+          <!-- card start -->
+          <div class="col-md-4">
+            <a href="{{url_for('book',isbn=book.isbn)}}">
+              <div class="mycard">
+                <blockquote class="blockquote mb-0">
+                  <img src="{{url_for('static',filename='images/boook.jpg')}}" alt="logo">
+                  <p>
+                    {{book.title}} | {{book.author}}
+                  </p>
+                  <footer class="blockquote-footer">
+                    Published on {{book.year}} | ISBN {{book.isbn}}
+                  </footer>
+                </blockquote>
+              </div>
+            </a>
+          </div>
+          <!-- card end -->
+          {%endfor%} {%endif%}
+        </div>
+      </div>
 </div>
 {%endblock%}
