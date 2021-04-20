@@ -1,3 +1,16 @@
 {%extends 'layout.html'%} {%block title%}Search: {{q}}{%endblock%}{%block template%}
-
+<div class="main">
+    <form action="/books">
+        <div class="search-box">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search your Book"
+            name="search"
+            value="{{q}}"
+          />
+          <div><button class="btn">Search</button></div>
+        </div>
+      </form>
+</div>
 {%endblock%}
