@@ -1,4 +1,7 @@
 {%extends 'layout.html'%} {%block title%}Search: {{q}}{%endblock%}{%block template%}
+
+<link rel="stylesheet" href="{{ url_for('static',filename='css/books.css')}}" />
+
 <div class="main">
     <form action="/books">
         <div class="search-box">
