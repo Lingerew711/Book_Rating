@@ -2,10 +2,6 @@
 <div class="mycontainer">
     <div class="left">
       <div>
-        <!-- <a href="{{url_for('search')}}"> -->
-          <!-- <img src="{{url_for('static',filename='images/logo.png')}}" alt="logo" -->
-        <!-- /></a> -->
-        <!-- <h2>Book Review & Rating</h2> -->
       </div>
     </div>
     <div class="right">
@@ -16,8 +12,7 @@
         {%endif%}
         <div class="login">
           <form method="POST" action="{{ url_for('register', next=next) }}">
-            <div class="form-group border-bottom border-warning"> 
-              <!-- <label for="exampleInputEmail1">Full Name</label> -->
+            <div class="form-group border-bottom border-warning">
               <input
                 type="text"
                 class="form-control"
@@ -29,7 +24,6 @@
               />
             </div>
             <div class="form-group border-bottom border-warning">
-              <!-- <label for="exampleInputEmail1">User Name</label> -->
               <input
                 type="text"
                 class="form-control"
@@ -41,7 +35,6 @@
               />
             </div>
             <div class="form-group border-bottom border-warning">
-              <!-- <label for="exampleInputPassword1">Password</label> -->
               <input
                 type="password"
                 class="form-control"
@@ -53,8 +46,6 @@
             </div>
   
             <div class="form-group border-bottom border-warning">
-             
-              <!-- <label for="exampleInputPassword2">Confirm Password</label> -->
               <input  
                 type="password"
                 class="form-control"
