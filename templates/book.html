@@ -79,6 +79,28 @@
               </div>
             </div>
           </form>
+          {%elif not( session['logged_in'])%}
+    <hr />
+    <div class="login-msg">
+      <a href="{{url_for('login', next=obj_book.isbn)}}">Login</a> or
+      <a href="{{url_for('register',next=obj_book.isbn)}}">Sign up</a> To give
+      your review
+    </div>
+    <hr />
+    {% endif%}
+    <div class="reviews mb-5">
+      {% if reviews %} {%for review in reviews%}
+      <!-- start review -->
+      <div class="review">
+        <h5>{{review.username}} | {{review.rating}}</h5>
+        <h6>{{review.review}}</h6>
+      </div>
+      <!-- end review -->
+      {%endfor%} {%endif%}
+    </div>
+    {%else%}
+    <div class="error">404 Not Found</div>
+    {%endif%}
       </div>
 </div>
 
