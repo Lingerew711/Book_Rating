@@ -38,9 +38,33 @@ def get_review_statistics(book_id):
 
 
 
-# Check for environment variable
-
-
+#Index route
 @app.route("/")
-def index():
+def search():
     return render_template('search.html')
+
+#registration form
+@app.route('/register', methods = ["GET", "POST"])
+def register():
+    isbn = request.args.get('next')
+    if request.method == 'POST':
+        name = request.form.get('name')
+        username = request.form.get('username')
+        password1 = request.form.get('password1')
+        password2 = request.form.get('password2')
+        if password1!=password2:
+            return render_template('signup.html',message="Password did not match.")
+           
+        try:
+            password = password_hash(password1)
+            user = db.execute("insert into users (name,username,password) values(:name, :username ,:password);",{'name':name,'username':username,'password':password})
+            db.commit()
+            session['logged_in'] = True
+            session['username'] = username
+            if isbn:
+                return redirect(url_for("book",isbn=isbn))
+            return redirect(url_for("search"))
+        except:
+            return render_template('signup.html',message="Username Exists. Try Another.")
+    return render_template('signup.html',next=isbn)
+
