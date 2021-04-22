@@ -103,7 +103,8 @@
   .form-control,
   .form-control:active,
   .form-control:focus {
-    background-color: #3535354f;
+    background-color:transparent;
+    border: none;
     color: #fff;
   }
   
