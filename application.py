@@ -11,7 +11,17 @@ import requests
 engine = create_engine("postgresql://postgres:linge531@localhost:5432/Book_store")
 
 db=scoped_session(sessionmaker(bind=engine))
+
 app = Flask(__name__)
+
+#password hashing
+
+def password_hash(password):
+    salt = "27a0091dee99016f8fb6599da096feff"
+    slat_password = password+salt
+    hashed_password = hashlib.md5(slat_password.encode())
+    return hashed_password.hexdigest()
+
 
 # Check for environment variable
 
