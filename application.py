@@ -22,6 +22,16 @@ def password_hash(password):
     hashed_password = hashlib.md5(slat_password.encode())
     return hashed_password.hexdigest()
 
+#get good reads data
+
+def get_goodreads_data(isbn):
+    response = requests.get("https://www.goodreads.com/book/review_counts.json", params={ "isbns": isbn})
+    value = response.json().get('books')[0]
+    count = value.get('work_ratings_count')
+    rating = value.get('average_rating')
+    return [count,rating]
+
+
 
 # Check for environment variable
 
