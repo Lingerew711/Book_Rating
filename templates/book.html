@@ -1,5 +1,6 @@
 {%extends 'layout.html'%} {%block title%}{% if obj_book %}{{obj_book.title}} |
 {{obj_book.author}}{%endif%}{%endblock%}{%block template%}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/book.css')}}" />
 
 <div class="main">
   <form action="/books">
