@@ -35,10 +35,7 @@
       </div>
       {% if not(error) %}
       <div class="rating">
-        <img
-          src="{{url_for('static',filename='images/goodreads.png')}}"
-          alt="logo"
-        />
+        <h2>Good Reads</h2>
         <p align="center">Rating {{rating}} / 5 by {{count}} people</p>
       </div>
       {%endif%}
@@ -77,6 +74,7 @@
           type="text"
           placeholder=""
           id="review_isbn"
+          class="d-none"
           name="review_isbn"
           value="{{obj_book.isbn}}"
         />
