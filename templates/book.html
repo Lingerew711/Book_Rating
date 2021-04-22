@@ -15,7 +15,7 @@
 
       <input
         type="text"
-        class="form-control"
+        class="form-control border border-warning"
         placeholder="Search your Book"
         name="search"
       />
@@ -52,7 +52,7 @@
         <div class="myreview">
           <div class="mt-4 mx-4">
             <label for="select">Rating</label>
-            <select id="select" class="form-control" name="rating">
+            <select id="select" class="form-control border border-warning" name="rating">
               <option>5</option>
               <option>4</option>
               <option>3</option>
@@ -63,7 +63,7 @@
           <div class="form-group mt-4 mx-4">
             <label for="exampleFormControlTextarea1">Review</label>
             <textarea
-              class="form-control"
+              class="form-control border border-warning"
               id="exampleFormControlTextarea1"
               rows="2"
               name="review"
@@ -80,7 +80,7 @@
           value="{{obj_book.isbn}}"
         />
         <div class="button">
-          <button class="btn m-3">Submit</button>
+          <button class="btn m-3 bg-info">Submit</button>
         </div>
       </div>
     </form>
