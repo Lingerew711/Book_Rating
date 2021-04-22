@@ -87,3 +87,19 @@ def login():
 
     return render_template('login.html',next=isbn)
 
+#books
+@app.route("/books")
+def books():
+    q = request.args.get('search')
+    if q != None:
+        q = q.strip().replace("'","")
+        obj_books = db.execute("select * from books where isbn LIKE ('%"+q+"%')  or lower(title) LIKE lower('%"+q+"%') or  lower(author) LIKE lower('%"+q+"%') order by year desc;").fetchall() 
+        count = len(obj_books)
+        if count == 0:
+            return render_template('books.html',q=q,count=count,message="404 Not Found")
+
+
+        
+        return render_template('books.html',q=q,count=count,obj_books=obj_books)
+    return render_template('books.html')
+
