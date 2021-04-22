@@ -153,5 +153,26 @@ def book(isbn):
         count,rating = 0,0
     return render_template('book.html',obj_book=res,count=count,rating=rating,reviews=reviews,message=message,is_reviewed=is_reviewed,error=error)
 
+#apiurl
+@app.route("/api/<isbn>")
+def api_url(isbn):
+    obj_books = db.execute("select * from books where isbn=:isbn;",{'isbn':isbn}).fetchone()
+    if obj_books == None:
+        return jsonify({
+            "error": "Invalid isbn.",
+            }),404
+    try:
+        count,rating = get_review_statistics(obj_books.id)
+    except:
+        count,rating = 0,0
+    
+    return jsonify({
+        "title": obj_books.title,
+        "author": obj_books.author,
+        "year": obj_books.year,
+        "isbn": obj_books.isbn,
+        "review_count": count,
+        "average_score": rating
+    }),200
 
 
