@@ -175,4 +175,9 @@ def api_url(isbn):
         "average_score": rating
     }),200
 
-
+#logout
+@app.route('/logout')
+def logout():
+    session.clear()
+    flash("Successfully Logout.", "success")
+    return redirect(url_for("login"))
