@@ -103,3 +103,55 @@ def books():
         return render_template('books.html',q=q,count=count,obj_books=obj_books)
     return render_template('books.html')
 
+#book
+@app.route("/book/<isbn>",methods=['GET','POST'])
+def book(isbn):
+    message = None
+    error = False
+    is_reviewed = False
+    if request.method == "POST" and session['logged_in']:
+        my_rating = int(request.form.get('rating'))
+        my_review = request.form.get('review')
+        book_id = request.form.get('review_isbn')
+        if my_review.strip()=="" or my_rating=="":
+            message = "Invalid Review"
+        else:
+            db.execute("insert into reviews (username, review, rating, book_id) select :username,:review,:rating,:book_id where not exists (select * from reviews where username = :username and book_id = :book_id);",
+            {
+                'username': session['username'],
+                'review': my_review,
+                'rating':my_rating,
+                'book_id': book_id    
+            })
+            db.commit()
+            is_reviewed = True
+
+
+
+    res = db.execute("select * from books where isbn=:isbn;",{'isbn':isbn}).fetchone() 
+    if res==None:
+        return render_template('book.html')
+    
+
+    reviews = db.execute("select * from reviews where book_id=:id;",{'id':res.isbn}).fetchall()
+    if request.method == "GET":
+        try:
+            if session['logged_in']:
+                check_review = db.execute("select user_id from reviews where book_id=:id and user_id=:user_id;",
+            {
+                'id':res.id,
+                'user_id': session['id']  
+            }).fetchone()
+                if check_review != None:
+                    is_reviewed = True
+        except:
+            pass
+    try:
+        count,rating = get_goodreads_data(isbn)
+    except:
+        error = True
+        count,rating = 0,0
+    return render_template('book.html',obj_book=res,count=count,rating=rating,reviews=reviews,message=message,is_reviewed=is_reviewed,error=error)
+
+
+
