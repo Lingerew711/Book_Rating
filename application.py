@@ -68,3 +68,22 @@ def register():
             return render_template('signup.html',message="Username Exists. Try Another.")
     return render_template('signup.html',next=isbn)
 
+
+#login form
+@app.route('/login', methods=["GET", "POST"])
+def login():
+    isbn = request.args.get('next')
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        user = db.execute("select * from users where username=:username and password=:password;",{'username':username,'password':password_hash(password)})
+        if user.rowcount == 0:
+            return render_template('login.html',message="Wrong Username or Password.")
+        session['logged_in'] = True
+        session['username'] = request.form['username']
+        if isbn:
+            return redirect(url_for("book",isbn=isbn))
+        return redirect(url_for("search"))
+
+    return render_template('login.html',next=isbn)
+
