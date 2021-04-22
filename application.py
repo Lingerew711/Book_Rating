@@ -181,3 +181,8 @@ def logout():
     session.clear()
     flash("Successfully Logout.", "success")
     return redirect(url_for("login"))
+
+if __name__ == "__main__":
+    app.secret_key="1234567lingebookstore"
+    app.run(debug = True)
+
