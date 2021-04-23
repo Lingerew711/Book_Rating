@@ -3,7 +3,8 @@ nav {
   }
   
   body {
-    background-color: var(--background);
+    background: #222D32;
+    font-family: 'Roboto', sans-serif;
   }
   
   .main {
@@ -12,7 +13,7 @@ nav {
   .search-box {
     display: flex;
     justify-content: center;
-    max-width: 26rem;
+    max-width: 30rem;
     margin: 0.8rem;
     position: absolute;
     top: 0;
@@ -23,12 +24,12 @@ nav {
     max-width: 3rem;
     max-height: auto;
   }
-  
+/*   
   .search-box .form-control {
     margin: 0 1rem;
     background-color: #fff;
     color: rgb(17, 17, 17);
-  }
+  } */
   
   .search-box .form-control::placeholder {
     color: #000;
@@ -59,7 +60,7 @@ nav {
   }
   
   .mycard {
-    background-color: #fff;
+    /* background-color: #fff; */
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
@@ -71,7 +72,7 @@ nav {
   } 
   .mycard:hover {
     box-shadow: 1px 1px 1px #00010069;
-    background: #f4f4f4;
+    background: #4d4a4a;
   }
   
   @media (max-width: 800px) {
