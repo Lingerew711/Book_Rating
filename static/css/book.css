@@ -42,7 +42,10 @@ nav {
     grid-template-columns: 3fr 1fr;
   }
   
-  .form-control,
+  .form-control
+  {
+  background-color:  rgb(83, 81, 81);
+  }
   .form-control:focus {
     /* background-color: #fff; */
     color: rgb(17, 17, 17);
@@ -96,7 +99,7 @@ nav {
   }
   
   .form-control::placeholder {
-    color: #000;
+    color: rgb(252, 250, 250);
     opacity: 0.5;
   }
   
@@ -155,6 +158,8 @@ nav {
     box-shadow: 1px 1px 1px #00010069;
     background: #4d4a4a;
   }
+
+
 
 
   .rate {
