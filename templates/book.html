@@ -120,8 +120,12 @@
       {% if reviews %} {%for review in reviews%}
       <!-- start review -->
       <div class="review">
-        <h5>{{review.username}} | {{review.rating}}</h5>
-        <h6>{{review.review}}</h6>
+        <h6>{{review.username}} | {% for item in range(0, review.rating) %}
+         ★
+      {% endfor %}</h6>
+        <footer class="blockquote-footer">
+          {{review.review}}
+        </footer>
       </div>
       <!-- end review -->
       {%endfor%} {%endif%}
