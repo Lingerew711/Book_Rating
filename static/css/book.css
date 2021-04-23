@@ -24,7 +24,14 @@ nav {
     font-weight: bold;
     letter-spacing: 1px;
   }
-  
+  .error {
+    color: rgb(151, 44, 44);
+    background-image: linear-gradient(to right, #2e292acc, #5a5151bf);
+    border-radius: 6px;
+    padding: 0.4rem;
+    margin: 0.3rem 0;
+    text-align: center;
+  }
   /* .search-box .form-control {
     margin: 0 1rem; */
     /* background-color: #fff;
