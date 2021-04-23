@@ -22,8 +22,16 @@ def password_hash(password):
     hashed_password = hashlib.md5(slat_password.encode())
     return hashed_password.hexdigest()
 
-#goodreads data
 
+# Ensure responses aren't cached
+
+@app.after_request
+def after_request(response):
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Expires"] = 0
+    response.headers["Pragma"] = "no-cache"
+    return response
+#goodreads data
 def get_goodreads_data(isbn):
     response = requests.get("https://www.goodreads.com/book/review_counts.json", params={ "isbns": isbn})
     value = response.json().get('books')[0]
