@@ -18,21 +18,21 @@ nav {
     max-width: 3rem;
     max-height: auto;
   }
-  /* .form-control-label {
-    font-size: 10px;
-    color: #6C6C6C;
+  label {
+    font-size: 20px;
+    color: rgb(224, 221, 221);
     font-weight: bold;
     letter-spacing: 1px;
-  } */
-  
-  .search-box .form-control {
-    /* margin: 0 1rem; */
-    /* background-color: #fff; */
-    color: #6C6C6C;;
   }
   
+  /* .search-box .form-control {
+    margin: 0 1rem; */
+    /* background-color: #fff;
+    color: #6C6C6C;;
+  } */
+  
   .search-box .form-control::placeholder {
-    color: #000;
+    color: rgb(255, 253, 253);
     opacity: 0.5;
   }
   
