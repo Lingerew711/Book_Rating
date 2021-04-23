@@ -62,7 +62,6 @@ def register():
         password2 = request.form.get('password2')
         if password1!=password2:
             return render_template('signup.html',message="Password did not match.")
-           
         try:
             password = password_hash(password1)
             user = db.execute("insert into users (name,username,password) values(:name, :username ,:password);",{'name':name,'username':username,'password':password})
@@ -122,7 +121,7 @@ def book(isbn):
         my_review = request.form.get('review')
         book_id = request.form.get('review_isbn')
         if my_review.strip()=="" or my_rating=="":
-            message = "Invalid Review"
+            flash("Invalid Review")
         else:
             db.execute("insert into reviews (username, review, rating, book_id) select :username,:review,:rating,:book_id where not exists (select * from reviews where username = :username and book_id = :book_id);",
             {
