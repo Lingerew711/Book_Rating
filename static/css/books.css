@@ -42,13 +42,13 @@ nav {
   
   .boxs a {
     text-decoration: none;
-    color: rgb(24, 24, 24);
+    color: rgb(224, 221, 221);
     outline: none;
   }
   
   .results > p {
     margin: 1.5rem 2rem;
-    color:white;
+    color: rgb(224, 221, 221);
   }
   
   .not-found {
