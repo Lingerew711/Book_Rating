@@ -289,7 +289,7 @@
   /* background-color: #262626; */
 }
 .about-section h1 {
-  color: white;
+  color: #ECF0F5;
   text-align: center;
   font-size: 50px;
   position: relative;
@@ -320,7 +320,7 @@
 
 }
 .about-section .all-sections .mini-section .text-mini-section p {
-  color: white;
+  color: #ECF0F5;
   font-size: 16px;
 
   margin-top: 30px;
@@ -338,7 +338,7 @@
 }
 .about-section .all-sections .mini-section .hexagon i {
   font-size: 55px;
-  color: white;
+  color: #ECF0F5;
   position: relative;
   top: 50%;
   left: 50%;
@@ -424,7 +424,7 @@
 .about-section .who-am-i .all-who .div-para p {
   font-size: 16px;
 
-  color: white;
+  color: #ECF0F5;
   text-align: center;
 }
 .about-section .who-am-i .all-who button {
@@ -477,7 +477,7 @@
 .hvr-bounce-to-right:hover,
 .hvr-bounce-to-right:focus,
 .hvr-bounce-to-right:active {
-  color: white;
+  color: #ECF0F5;
 }
 
 .hvr-bounce-to-right:hover:before,
@@ -487,4 +487,253 @@
   transform: scaleX(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+
+
+
+
+
+/*  Footer css */
+.element-btn .element-fill-btn {
+  background-color: #0DB8DE;
+  border: 0;
+  color: #fff;
+  padding: 13px 5px;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  width: 252px;
+  margin: 0 auto;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 50px -10px rgba(255, 10, 120, 1);
+ 
+}
+.fill-btn {
+  background-color: #0DB8DE;
+  border: 0;
+  color: #ECF0F5;
+  padding: 13px 5px;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  width: 252px;
+  margin: 0 auto;
+  border-radius: 25px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+ 
+}
+.fill-btn:hover,
+.element-btn .element-fill-btn:hover {
+  background-color: #201f1f;
+  box-shadow: 0px 10px 50px -10px rgb(32, 31, 31);
+}
+
+
+.footer {
+  position: relative;
+  background-color: #1A2226;
+  padding:50px 0px;
+}
+/* .form-Box input[type="text"],
+.form-Box input[type="email"],
+.form-Box input[type="passowrd"],
+.form-Box textarea {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #737373;
+  border-radius: 25px;
+  background-color: transparent;
+  padding: 5px 25px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #737373;
+  font-style: italic;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+.form-Box textarea {
+  height: 113px;
+  padding: 15px 25px;
+  resize: none;
+}
+.form-Box .b_effect:focus,
+.subscribe form input:focus {
+  border-color: #0DB8DE;
+}
+
+.form-Box .fill-btn {
+  position: static;
+  transform: translate(0%, 0);
+  -webkit-transform: translate(0%, 0);
+  -moz-transform: translate(0%, 0);
+  -ms-transform: translate(0%, 0);
+  width: 184px;
+}
+
+.form-Box .fill-btn:hover,
+.subscribe form .fill-btn:hover {
+  background-color: #615f4a;
+  color: #201f1f;
+  box-shadow: 0px 10px 50px -10px rgb(173, 164, 97);
+} */
+
+.fTitle {
+  font-weight: 900;
+  color: #babdc0;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.fTitle span {
+  color: #0DB8DE;
+}
+
+.contact-address ul li,
+.contact-address ul li a {
+  color: #737373;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 15px;
+  line-height: 32px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.contact-address ul li i {
+  margin-right: 15px;
+  display: inline-block;
+  float: left;
+  line-height: 32px;
+}
+
+.contact-address ul li span {
+  display: table;
+}
+
+.contact-address ul li a:hover {
+  color: #0DB8DE;
+}
+
+.subscribe form {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.subscribe form input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #737373;
+  border-radius: 25px;
+  background-color: transparent;
+  padding: 5px 215px 5px 25px;
+  font-size: 14px;
+  color: #737373;
+  font-style: italic;
+}
+
+.subscribe form .fill-btn {
+  bottom: auto;
+  top: 0;
+  right: 0;
+  left: auto;
+  transform: translate(0%, 0);
+  -webkit-transform: translate(0%, 0);
+  -moz-transform: translate(0%, 0);
+  -ms-transform: translate(0%, 0);
+  width: 209px;
+}
+
+.social-icons ul li {
+  display: inline-block;
+  float: left;
+  color: #fff;
+  text-align: center;
+  line-height: 43px;
+  position: relative;
+  width: 43px;
+  height: 43px;
+  margin-right: 28px;
+}
+
+.social-icons ul li a {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+}
+
+.social-icons ul li:before {
+  content: "";
+  width: 43px;
+  height: 43px;
+  display: inline-block;
+  position: absolute;
+  border: 1px solid #0DB8DE;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.social-icons ul li:last-child {
+  margin: 0;
+}
+
+.social-icons ul li:hover:before {
+  background: #0DB8DE;
+}
+
+
+/* Copyright css */
+
+.copyright {
+  padding: 51.5px 0;
+  text-align: center;
+}
+
+.copyright h6 {
+  font-size: 14px;
+  font-style: italic;
+  color: #737373;
+}
+
+.copyright h6 a {
+  color: #0DB8DE;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.copyright h6 a:hover {
+  color: #201f1f;
 }
