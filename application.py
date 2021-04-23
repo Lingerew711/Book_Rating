@@ -118,7 +118,7 @@ def book(isbn):
     error = False
     is_reviewed = False
     if request.method == "POST" and session['logged_in']:
-        my_rating = int(request.form.get('rating'))
+        my_rating = int(request.form.get('rate'))
         my_review = request.form.get('review')
         book_id = request.form.get('review_isbn')
         if my_review.strip()=="" or my_rating=="":
