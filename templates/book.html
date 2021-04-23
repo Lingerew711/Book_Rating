@@ -26,13 +26,27 @@
   <div class="container mt-5">
     {% if obj_book %}
     <div class="info-section">
-      <div class="info border border-warning">
+      <!-- <div class="info border border-warning">
         <img
           src="{{url_for('static',filename='images/boook.jpg')}}"
           alt="logo"
         />
         <h2>{{obj_book.title}}</h2>
         <p>{{obj_book.author}} | {{obj_book.year}} | {{obj_book.isbn}}</p>
+      </div> -->
+      <div class="col-md-4">
+          <div class="mycard border border-warning">
+            <blockquote class="blockquote mb-0">
+              <!-- <img src="{{url_for('static',filename='images/boook.jpg')}}" alt="logo"> -->
+              <p>
+                {{obj_book.title}} | {{obj_book.author}}
+              </p>
+              <footer class="blockquote-footer">
+                Published on {{obj_book.year}} | ISBN {{obj_book.isbn}}
+              </footer>
+            </blockquote>
+          </div>
+        <!-- </a> -->
       </div>
       {% if not(error) %}
       <div class="rating">

@@ -130,3 +130,20 @@ nav {
     }
   }
   
+
+
+  .mycard {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px #0000001c;
+    margin-bottom: 0.6rem;
+    transition: all 0.1s;
+  } 
+  .mycard:hover {
+    box-shadow: 1px 1px 1px #00010069;
+    background: #f4f4f4;
+  }
