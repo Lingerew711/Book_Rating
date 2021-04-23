@@ -160,15 +160,18 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
   
-  .login-key {
+  /* .login-key {
     height: 100px;
     font-size: 80px;
     line-height: 100px;
     background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  } */
+  img{
+    width: 10rem;
+    height: 10rem !important;
   }
-  
   .login-title {
     margin-top: 15px;
     text-align: center;
