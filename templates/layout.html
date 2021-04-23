@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/jpg" href="{{url_for('static',filename='images/brand.png')}}"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="{{url_for('static',filename='images/brand.png')}}"
+    />
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <link
       rel="stylesheet"
@@ -21,26 +35,119 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static',filename='css/base.css')}}"/>
+      href="{{ url_for('static',filename='css/base.css')}}"
+    />
     <title>{%block title%}{%endblock%}</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <ul>
-          {% if session['logged_in']%}
-          <li>
-            <span class="text-light"><i class="fa fa-user-circle fa-lg"></i> &nbsp;{{session['username']}}</span>
-          </li>
-          {% endif %}
-          <li><a href="{{url_for('search')}}" class="text-light">Search</a></li>
-          {% if not session['logged_in']%}
-          <li><a href="{{url_for('login')}}" class="text-light">Login</a></li>
-          <li><a href="{{url_for('register')}}" class="text-light">Sign up</a></li>
-          {%else%}
-          <li><a href="{{url_for('logout')}}" class="text-light">Logout</a></li>
-          {% endif %}
-        </ul>
-      </nav>
-      {% block template %}{%endblock%}
-</body>
+      <ul>
+        {% if session['logged_in']%}
+        <li>
+          <span class="text-light"
+            ><i class="fa fa-user-circle fa-lg"></i>
+            &nbsp;{{session['username']}}</span
+          >
+        </li>
+        {% endif %}
+        <li><a href="{{url_for('search')}}" class="text-light">Search</a></li>
+        {% if not session['logged_in']%}
+        <li><a href="{{url_for('login')}}" class="text-light">Login</a></li>
+        <li>
+          <a href="{{url_for('register')}}" class="text-light">Sign up</a>
+        </li>
+        {%else%}
+        <li><a href="{{url_for('logout')}}" class="text-light">Logout</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    {% block template %}{%endblock%}
+
+    <section id="footer" class="footer mt-5">
+      <div class="footerBg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="contact-address btm-brdr">
+              <h4 class="fTitle">Services From <span>Developer</span></h4>
+              <ul>
+                <li>
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                  <span>Web Design and Development</span>
+                </li>
+                <li>
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                  <span>Mobile App Design and Development</span>
+                </li>
+                <li>
+                  <i class="fa fa-desktop" aria-hidden="true"></i
+                  ><span>Short and Long Term Trainings</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="contact-address btm-brdr">
+              <h4 class="fTitle">Contact <span>Me</span></h4>
+              <ul>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>+(251)943-44-74-99</span>
+                </li>
+                <li>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>King George VI St, Addis Ababa 1000</span>
+                </li>
+                <li>
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i
+                  ><span>se.lingerew.getie@gmail.com</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="social-icons">
+              <h4 class="fTitle">Social <span>News</span></h4>
+              <ul>
+                <li>
+                  <a href="'#" target="_blank">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="'#" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="'#" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="'#" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer Section Ends -->
+    <!-- copyright Section Begins -->
+    <section id="copyright" class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h6>
+              © 2021 Developed by
+              <a href="#" target="_blank"><i>Linge G.</i></a>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
