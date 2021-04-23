@@ -32,11 +32,11 @@
         <div class="boxs row">
           {%if obj_books%} {% for book in obj_books %}
           <!-- card start -->
-          <div class="col-md-4 border border-warning">
+          <div class="col-md-4">
             <a href="{{url_for('book',isbn=book.isbn)}}">
-              <div class="mycard">
+              <div class="mycard border border-warning">
                 <blockquote class="blockquote mb-0">
-                  <img src="{{url_for('static',filename='images/boook.jpg')}}" alt="logo">
+                  <!-- <img src="{{url_for('static',filename='images/boook.jpg')}}" alt="logo"> -->
                   <p>
                     {{book.title}} | {{book.author}}
                   </p>
