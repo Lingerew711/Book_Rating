@@ -120,8 +120,8 @@ def book(isbn):
         my_rating = request.form.get('rate')
         my_review = request.form.get('review')
         book_id = request.form.get('review_isbn')
-        if my_review=="" or my_rating is None:
-            flash("Invalid Review.")
+        if my_review.strip()=="" or my_rating=="":
+            message = "Invalid Review"
         else:
             db.execute("insert into reviews (username, review, rating, book_id) select :username,:review,:rating,:book_id where not exists (select * from reviews where username = :username and book_id = :book_id);",
             {
