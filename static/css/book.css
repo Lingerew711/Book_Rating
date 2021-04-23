@@ -11,16 +11,24 @@ nav {
     top: 0;
     left: 1.1rem;
   }
-  
+  p ,h2{
+    color: rgb(224, 221, 221);
+  }
   .search-box div img {
     max-width: 3rem;
     max-height: auto;
   }
+  /* .form-control-label {
+    font-size: 10px;
+    color: #6C6C6C;
+    font-weight: bold;
+    letter-spacing: 1px;
+  } */
   
   .search-box .form-control {
-    margin: 0 1rem;
-    background-color: #fff;
-    color: rgb(17, 17, 17);
+    /* margin: 0 1rem; */
+    /* background-color: #fff; */
+    color: #6C6C6C;;
   }
   
   .search-box .form-control::placeholder {
@@ -36,7 +44,7 @@ nav {
   
   .form-control,
   .form-control:focus {
-    background-color: #fff;
+    /* background-color: #fff; */
     color: rgb(17, 17, 17);
   }
   .rating {
@@ -60,7 +68,7 @@ nav {
     color: var(--secondary);
   }
   .myreview-box {
-    background-color: #fff;
+    /* background-color: #fff; */
     box-shadow: 1px 1px 2px #0000001c;
     padding: 0.5rem;
   }
@@ -98,7 +106,7 @@ nav {
   
   .review {
     padding: 1rem;
-    background-color: #fff;
+    /* background-color: #fff; */
     box-shadow: 1px 1px 2px #0000001c;
     margin-bottom: 0.5rem;
   }
@@ -133,7 +141,7 @@ nav {
 
 
   .mycard {
-    background-color: #fff;
+    /* background-color: #fff; */
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
@@ -145,7 +153,7 @@ nav {
   } 
   .mycard:hover {
     box-shadow: 1px 1px 1px #00010069;
-    background: #f4f4f4;
+    background: #4d4a4a;
   }
 
 
