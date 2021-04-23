@@ -117,11 +117,11 @@ def book(isbn):
     error = False
     is_reviewed = False
     if request.method == "POST" and session['logged_in']:
-        my_rating = int(request.form.get('rate'))
+        my_rating = request.form.get('rate')
         my_review = request.form.get('review')
         book_id = request.form.get('review_isbn')
-        if my_review.strip()=="" or my_rating=="":
-            flash("Invalid Review")
+        if my_review=="" or my_rating is None:
+            flash("Invalid Review.")
         else:
             db.execute("insert into reviews (username, review, rating, book_id) select :username,:review,:rating,:book_id where not exists (select * from reviews where username = :username and book_id = :book_id);",
             {
@@ -186,9 +186,7 @@ def api_url(isbn):
 @app.route('/logout')
 def logout():
     session.clear()
-    flash("Successfully Logout.", "success")
-    return redirect(url_for("login"))
-
+    return render_template('login.html', message="Successfully Logout.")
 if __name__ == "__main__":
     app.secret_key="1234567lingebookstore"
     app.run(debug = True)
