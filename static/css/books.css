@@ -32,10 +32,9 @@ nav {
   } */
   
   .search-box .form-control::placeholder {
-    color: #000;
+    color:white;
     opacity: 0.5;
-  }
-  
+  } 
   .boxs {
     min-width: 90vw;
     margin: 1rem;
@@ -49,7 +48,7 @@ nav {
   
   .results > p {
     margin: 1.5rem 2rem;
-    color: rgba(0, 0, 0, 0.466);
+    color:white;
   }
   
   .not-found {
