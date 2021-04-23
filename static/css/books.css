@@ -73,8 +73,7 @@ nav {
   .mycard:hover {
     box-shadow: 1px 1px 1px #00010069;
     background: #4d4a4a;
-  }
-  
+  } 
   @media (max-width: 800px) {
     .main {
       display: flex;
