@@ -108,15 +108,15 @@
       </div>
     </form>
     {%elif not( session['logged_in'])%}
-    <hr />
+    <hr class="border-warning"/>
     <div class="login-msg">
       <a href="{{url_for('login', next=obj_book.isbn)}}">Login</a> or
       <a href="{{url_for('register',next=obj_book.isbn)}}">Sign up</a> to give
       your review
     </div>
-    <hr />
+    <hr class="border-warning"/>
     {% endif%}
-    <div class="reviews mb-5">
+    <div class="reviews mb-5" >
       {% if reviews %} {%for review in reviews%}
       <!-- start review -->
       <div class="review">
