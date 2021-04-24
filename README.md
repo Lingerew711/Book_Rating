@@ -13,7 +13,7 @@
     - `.\venv\Scripts\activate`
     - `pip install -r requirements.txt`
 2. set the necessary environmental variables
-    - `set DATABASE_URL=postgresql://tdyewcwridjnjh:cbf075ab7a87d57d5b851e0c5b389ed751aa2941fa75f7128567a5ab7f22a0c3@ec2-3-217-219-146.compute-1.amazonaws.com:5432/ded7d9rdhtgdjo`
+    - 
     - `set FLASK_APP=app.py`
 
 
