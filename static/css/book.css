@@ -32,11 +32,6 @@ nav {
     margin: 0.3rem 0;
     text-align: center;
   }
-  /* .search-box .form-control {
-    margin: 0 1rem; */
-    /* background-color: #fff;
-    color: #6C6C6C;;
-  } */
   
   .search-box .form-control::placeholder {
     color: rgb(255, 253, 253);

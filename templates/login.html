@@ -1,64 +1,6 @@
 {% extends 'layout.html' %} {%block title%}Login{%endblock%} {% block template %}
 
-<!-- <style>
-    body {
-      background-image: linear-gradient(
-          to right,
-          rgba(13, 6, 54, 0.219),
-          rgba(43, 5, 5, 0.123)
-        ),
-        url("{{url_for('static',filename='images/store.jpg')}}");
-    }
-    .left{
-      background-repeat: no-repeat;
-      background-image: linear-gradient(
-          to right,
-          rgba(13, 6, 54, 0.219),
-          rgba(43, 5, 5, 0.123)
-        ),
-        url("{{url_for('static',filename='images/baby.png')}}");
-    }
-  </style> -->
 <div class="mycontainer"> 
-    <!-- <div class="left"></div>
-    <div class="right">
-      <div class="login-box">
-        <h3 align="center">Login</h3>
-        {% if message %}
-        <div class="error">{{message}}</div>
-        {%endif%}
-        <div class="login">
-          <form method="POST" action="{{ url_for('login', next=next) }}">
-            <div class="form-group border-bottom border-warning ">
-              <label for="exampleInputEmail1">Username</label>
-              <input
-                type="text"
-                class="form-control"
-                id="exampleInputEmail1"
-                placeholder="Enter Username"
-                name="username"
-                required
-              />
-            </div>
-            <div class="form-group border-bottom border-warning">
-              <label for="exampleInputPassword1">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-                placeholder="Enter Password"
-                name="password"
-                required
-              />
-            </div>
-  
-            <button type="submit" class="btn bg-info">Login</button>
-          </form>
-        </div>
-      </div>
-    </div> -->
-
-
     <div class="row">
       <div class="col-lg-4 col-md-2">
         <div class="col-lg-3 col-md-3">

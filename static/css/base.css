@@ -10,20 +10,12 @@
     --primary: #54defd;
     --secondary: #0DB8DE;
   }
-  /* body {
-    background-color: var(--background);
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
+   
+  body {
+    overflow-x: hidden;
+    background: #222D32;
+    font-family: 'Roboto', sans-serif;
   }
-  a {
-    outline: none;
-  }
-  */
   .error {
     color: rgb(151, 44, 44);
     background-image: linear-gradient(to right, #2e292acc, #5a5151bf);
@@ -66,97 +58,7 @@
   nav ul li a:hover {
     color: var(--secondary);
   }
-  /*
-  .mycontainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 2rem;
-  }
-  
-  .right {
-    display: flex;
-    min-height: 80vh;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login-box {
-    max-width: 20rem;
-    padding: 2rem;
-    background-color: #2222229c;
-    box-shadow: -2px 4px 31px #00000069;
-  }
-  .login-box h3,
-  .login-box label {
-    color: #fff;
-  }
-  .login form {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-  }
-  .btn,
-  .btn:hover {
-    background-color: var(--secondary);
-    color: #fff;
-    outline: none !important;
-  }
-  .btn:focus {
-    box-shadow: 0 0 0 0.2rem rgb(0, 189, 157, 0.25);
-  }
-  
-  .form-control,
-  .form-control:active,
-  .form-control:focus {
-    background-color:transparent;
-    border: none;
-    color: #fff;
-  }
-  
-  .form-control:focus {
-    border-color: var(--secondary);
-    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-  }
-  
-  .form-control::placeholder {
-    color: #fff;
-    opacity: 0.5;
-  }
-  
-  .left {
-    min-height: 80vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-  }
-  .left div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 2rem;
-  }
-  
-  .left div img {
-    max-width: 12rem;
-    max-height: auto;
-  }
-  
-  .left div h2 {
-    font-size: 1.5rem;
-    color: var(--secondary);
-  }
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: rgb(255, 255, 255) !important;
-  } */
-  body {
-    overflow-x: hidden;
-    background: #222D32;
-    font-family: 'Roboto', sans-serif;
-  }
+ 
   .login-box {
     margin-top: 75px;
     height: auto;
@@ -286,52 +188,44 @@
     }
   }
   
-  
-.about-section {
-  font-family: 'Open Sans', sans-serif;
-  width: 100%;
-  position: relative;
-  height: 100%;
-  /* background-color: #262626; */
-}
-.about-section h1 {
+h1 {
   color: #ECF0F5;
   text-align: center;
   font-size: 50px;
   position: relative;
   top: 15%;
 }
-.about-section .all-sections {
+.all-sections {
   display: flex;
   justify-content: space-evenly;
   position: relative;
   top: 20%;
 }
 @media (max-width: 1496px) {
-  .about-section .all-sections {
+  .all-sections {
     flex-wrap: wrap;
   }
 }
-.about-section .all-sections .mini-section {
+.all-sections .mini-section {
   height: 350px;
   width: 20%;
 }
-.about-section .all-sections .mini-section .text-mini-section {
+.all-sections .mini-section .text-mini-section {
   position: relative;
   text-align: center;
 }
-.about-section .all-sections .mini-section .text-mini-section h1 {
+.all-sections .mini-section .text-mini-section h1 {
   font-size: 30px;
 
 
 }
-.about-section .all-sections .mini-section .text-mini-section p {
+.all-sections .mini-section .text-mini-section p {
   color: #ECF0F5;
   font-size: 16px;
 
   margin-top: 30px;
 }
-.about-section .all-sections .mini-section .hexagon {
+.all-sections .mini-section .hexagon {
   position: relative;
   top: 5px;
   left: 50%;
@@ -342,7 +236,7 @@
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
-.about-section .all-sections .mini-section .hexagon i {
+.all-sections .mini-section .hexagon i {
   font-size: 55px;
   color: #ECF0F5;
   position: relative;
@@ -351,99 +245,54 @@
   transform: translate(-50%, -50%);
 }
 @media (max-width: 1496px) {
-  .about-section .all-sections .mini-section {
+  .all-sections .mini-section {
     width: 35%;
     margin-bottom: 50px;
   }
-  .about-section .all-sections .mini-section .hexagon {
+  .all-sections .mini-section .hexagon {
     width: 32%;
     height: 150px;
   }
 }
 @media (max-width: 1024px) {
-  .about-section .all-sections .mini-section {
+  .all-sections .mini-section {
     width: 60%;
     margin-bottom: 50px;
   }
-  .about-section .all-sections .mini-section .hexagon {
+  .all-sections .mini-section .hexagon {
     width: 27%;
     height: 155px;
   }
 }
 @media (max-width: 920px) {
-  .about-section .all-sections .mini-section .hexagon {
+  .all-sections .mini-section .hexagon {
     width: 30%;
   }
 }
 @media (max-width: 800px) {
-  .about-section .all-sections .mini-section .hexagon {
+  .all-sections .mini-section .hexagon {
     width: 31%;
   }
 }
 @media (max-width: 730px) {
-  .about-section .all-sections .mini-section .hexagon {
+  .all-sections .mini-section .hexagon {
     width: 40%;
   }
 }
 @media (max-width: 635px) {
-  .about-section .all-sections .mini-section .hexagon {
+  .all-sections .mini-section .hexagon {
     width: 40%;
   }
 }
 @media (max-width: 550px) {
-  .about-section .all-sections .mini-section .hexagon {
+  .all-sections .mini-section .hexagon {
     width: 50%;
   }
 }
 @media (max-width: 400px) {
-  .about-section .all-sections .mini-section .hexagon {
+  .all-sections .mini-section .hexagon {
     width: 60%;
   }
-}
-.about-section .who-am-i {
-  width: 100%;
-  position: relative;
-  top: 22%;
-}
-.about-section .who-am-i .image-me {
-  height: 400px;
-  width: 400px;
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background-color: #16d7cd;
-}
-.about-section .who-am-i .all-who h1 {
-  font-size: 25px;
-
-  margin-top: 20px;
-}
-.about-section .who-am-i .all-who .div-para {
-  width: 400px;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-}
-.about-section .who-am-i .all-who .div-para p {
-  font-size: 16px;
-
-  color: #ECF0F5;
-  text-align: center;
-}
-.about-section .who-am-i .all-who button {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-  margin-top: 20px;
-  height: 60px;
-  width: 200px;
-  border: none;
-
-  font-size: 17px;
-  cursor: pointer;
 }
 
 .hvr-bounce-to-right {
@@ -557,50 +406,7 @@
   background-color: #1A2226;
   padding:50px 0px;
 }
-/* .form-Box input[type="text"],
-.form-Box input[type="email"],
-.form-Box input[type="passowrd"],
-.form-Box textarea {
-  width: 100%;
-  height: 50px;
-  border: 1px solid #737373;
-  border-radius: 25px;
-  background-color: transparent;
-  padding: 5px 25px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: #737373;
-  font-style: italic;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-}
-.form-Box textarea {
-  height: 113px;
-  padding: 15px 25px;
-  resize: none;
-}
-.form-Box .b_effect:focus,
-.subscribe form input:focus {
-  border-color: #0DB8DE;
-}
 
-.form-Box .fill-btn {
-  position: static;
-  transform: translate(0%, 0);
-  -webkit-transform: translate(0%, 0);
-  -moz-transform: translate(0%, 0);
-  -ms-transform: translate(0%, 0);
-  width: 184px;
-}
-
-.form-Box .fill-btn:hover,
-.subscribe form .fill-btn:hover {
-  background-color: #615f4a;
-  color: #201f1f;
-  box-shadow: 0px 10px 50px -10px rgb(173, 164, 97);
-} */
 
 .fTitle {
   font-weight: 900;
@@ -640,25 +446,6 @@
 
 .contact-address ul li a:hover {
   color: #0DB8DE;
-}
-
-.subscribe form {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 60px;
-}
-
-.subscribe form input {
-  width: 100%;
-  height: 50px;
-  border: 1px solid #737373;
-  border-radius: 25px;
-  background-color: transparent;
-  padding: 5px 215px 5px 25px;
-  font-size: 14px;
-  color: #737373;
-  font-style: italic;
 }
 
 .subscribe form .fill-btn {

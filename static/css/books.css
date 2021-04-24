@@ -24,13 +24,7 @@ nav {
     max-width: 3rem;
     max-height: auto;
   }
-/*   
-  .search-box .form-control {
-    margin: 0 1rem;
-    background-color: #fff;
-    color: rgb(17, 17, 17);
-  } */
-  
+
   .search-box .form-control::placeholder {
     color:white;
     opacity: 0.5;

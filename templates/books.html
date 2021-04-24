@@ -1,18 +1,21 @@
-{%extends 'layout.html'%} {%block title%}Search: {{q}}{%endblock%}{%block template%}
+{%extends 'layout.html'%} {%block title%}Search: {{q}}{%endblock%}{%block
+template%}
 
 <link rel="stylesheet" href="{{ url_for('static',filename='css/books.css')}}" />
 
 <div class="main">
-    <form action="/books">
-        <div class="search-box">
-          <div>
-            <a href="{{url_for('search')}}">
-              <img src="{{url_for('static',filename='images/brand.png')}}" alt="logo"
-            /></a>
-          </div>
-    
-         <div class="form-group">
-          <input
+  <form action="/books">
+    <div class="search-box">
+      <div>
+        <a href="{{url_for('search')}}">
+          <img
+            src="{{url_for('static',filename='images/brand.png')}}"
+            alt="logo"
+        /></a>
+      </div>
+
+      <div class="form-group">
+        <input
           type="text"
           class="form-control rounded"
           autocomplete="off"
@@ -20,41 +23,38 @@
           name="search"
           value="{{q}}"
         />
-         </div>
-          <div class="col-lg-3 login-btm login-button">
-            <button type="submit" class="btn btn-outline-primary" id="btnSubmit">Search</button>
-        </div>
-        </div>
-      </form>
-
-      <div class="results">
-        <p>{{count}} results found for {{q}}</p>
-        {%if message %}
-        <div class="error">
-          {{message}}
-        </div>
-        {%endif%}
-        <div class="boxs row">
-          {%if obj_books%} {% for book in obj_books %}
-          <!-- card start -->
-          <div class="col-md-4">
-            <a href="{{url_for('book',isbn=book.isbn)}}">
-              <div class="mycard border border-warning">
-                <blockquote class="blockquote mb-0">
-                  <!-- <img src="{{url_for('static',filename='images/boook.jpg')}}" alt="logo"> -->
-                  <p>
-                    {{book.title}} | {{book.author}}
-                  </p>
-                  <footer class="blockquote-footer">
-                    Published on {{book.year}} | ISBN {{book.isbn}}
-                  </footer>
-                </blockquote>
-              </div>
-            </a>
-          </div>
-          <!-- card end -->
-          {%endfor%} {%endif%}
-        </div>
       </div>
+      <div class="col-lg-3 login-btm login-button">
+        <button type="submit" class="btn btn-outline-primary" id="btnSubmit">
+          Search
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="results">
+    <p>{{count}} results found for {{q}}</p>
+    {%if message %}
+    <div class="error">{{message}}</div>
+    {%endif%}
+    <div class="boxs row">
+      {%if obj_books%} {% for book in obj_books %}
+      <!-- card start -->
+      <div class="col-md-4">
+        <a href="{{url_for('book',isbn=book.isbn)}}">
+          <div class="mycard border border-warning">
+            <blockquote class="blockquote mb-0">
+              <p>{{book.title}} | {{book.author}}</p>
+              <footer class="blockquote-footer">
+                Published on {{book.year}} | ISBN {{book.isbn}}
+              </footer>
+            </blockquote>
+          </div>
+        </a>
+      </div>
+      <!-- card end -->
+      {%endfor%} {%endif%}
+    </div>
+  </div>
 </div>
 {%endblock%}
