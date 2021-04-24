@@ -1,206 +1,202 @@
 nav {
-    background-image: none;
-  }
-  
+  background-image: none;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  max-width: 26rem;
+  margin: 0.8rem;
+  position: absolute;
+  top: 0;
+  left: 1.1rem;
+}
+p ,h2{
+  color: rgb(224, 221, 221);
+}
+.search-box div img {
+  max-width: 3rem;
+  max-height: auto;
+}
+label {
+  font-size: 20px;
+  color: rgb(224, 221, 221);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* .search-box .form-control {
+  margin: 0 1rem; */
+  /* background-color: #fff;
+  color: #6C6C6C;;
+} */
+
+.search-box .form-control::placeholder {
+  color: rgb(255, 253, 253);
+  opacity: 0.5;
+}
+
+.info-section {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.form-control
+{
+  color: rgb(241, 235, 235);
+background-color:  rgb(83, 81, 81);
+}
+.form-control:focus {
+  /* background-color: #fff; */
+  color: rgb(241, 235, 235);
+}
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #372213;
+}
+.rating img {
+  max-width: 7rem;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.login-msg {
+  margin-top: 1rem;
+  text-align: center;
+  color: rgb(194, 186, 186);
+}
+.login-msg a {
+  text-decoration: none;
+  color: var(--secondary);
+  color: rgb(27, 129, 177);
+
+}
+.myreview-box {
+  /* background-color: #fff; */
+  box-shadow: 1px 1px 2px #0000001c;
+  padding: 0.5rem;
+}
+.myreview {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#select {
+  cursor: pointer;
+}
+
+select:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 #000;
+}
+
+select {
+  text-align-last: center;
+}
+
+.form-control::placeholder {
+  color: rgb(252, 250, 250);
+  opacity: 0.5;
+}
+
+.reviews {
+  margin-top: 2.5rem;
+}
+
+h5, h6{
+  color: rgb(252, 250, 250);
+}
+.review {
+  border:1px solid #c59b08;
+  border-radius: 20px;
+  padding: 1rem;
+  /* background-color: #fff; */
+  box-shadow: 1px 1px 2px #0000001c;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 800px) {
   .search-box {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
-    max-width: 26rem;
-    margin: 0.8rem;
-    position: absolute;
-    top: 0;
-    left: 1.1rem;
+    align-items: center;
+    margin-top: 0;
+    position: relative;
   }
-  p ,h2{
-    color: rgb(224, 221, 221);
+
+  .search-box .form-control {
+    margin: 1rem 1rem;
   }
-  .search-box div img {
-    max-width: 3rem;
-    max-height: auto;
-  }
-  label {
-    font-size: 20px;
-    color: rgb(224, 221, 221);
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-  .error {
-    color: rgb(151, 44, 44);
-    background-image: linear-gradient(to right, #2e292acc, #5a5151bf);
-    border-radius: 6px;
-    padding: 0.4rem;
-    margin: 0.3rem 0;
-    text-align: center;
-  }
-  
-  .search-box .form-control::placeholder {
-    color: rgb(255, 253, 253);
-    opacity: 0.5;
-  }
-  
-  .info-section {
-    margin-top: 2.5rem;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-  }
-  
-  .form-control
-  {
-    color: rgb(241, 235, 235);
-  background-color:  rgb(83, 81, 81);
-  }
-  .form-control:focus {
-    /* background-color: #fff; */
-    color: rgb(241, 235, 235);
-  }
-  .rating {
+  .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #372213;
   }
-  .rating img {
-    max-width: 7rem;
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
-  
-  .login-msg {
-    margin-top: 1rem;
-    text-align: center;
-    color: rgb(194, 186, 186);
-  }
-  .login-msg a {
-    text-decoration: none;
-    color: rgb(27, 129, 177);
-    
-  }
-  .myreview-box {
-    /* background-color: #fff; */
-    box-shadow: 1px 1px 2px #0000001c;
-    padding: 0.5rem;
-  }
-  .myreview {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-  }
-  
-  .button {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  #select {
-    cursor: pointer;
-  }
-  
-  select:-moz-focusring {
-    color: transparent !important;
-    text-shadow: 0 0 0 #000;
-  }
-  
-  select {
-    text-align-last: center;
-  }
-  
-  .form-control::placeholder {
-    color: rgb(252, 250, 250);
-    opacity: 0.5;
-  }
-  
-  .reviews {
+  .info-section {
     margin-top: 2.5rem;
-  }
-  h5{
-    color: rgb(252, 250, 250);
-  }
-  .review {
-    border:1px solid #c59b08;
-    border-radius: 20px;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  @media (max-width: 800px) {
-    .search-box {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 0;
-      position: relative;
-    }
-  
-    .search-box .form-control {
-      margin: 1rem 1rem;
-    }
-    .main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .info-section {
-      margin-top: 2.5rem;
-      display: block;
-    }
-  
-    .myreview {
-      display: block;
-    }
-  }
-  
-
-
-  .mycard {
-    /* background-color: #fff; */
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-    padding: 1rem;
-    cursor: pointer;
-    box-shadow: 1px 1px 2px #0000001c;
-    margin-bottom: 0.6rem;
-    transition: all 0.1s;
-  } 
-  .mycard:hover {
-    box-shadow: 1px 1px 1px #00010069;
-    background: #4d4a4a;
+    display: block;
   }
 
+  .myreview {
+    display: block;
+  }
+}
 
-
-
-  .rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-  }
-  .rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-  }
-  .rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-  }
-  .rate:not(:checked) > label:before {
-    content: '★ ';
-  }
-  .rate > input:checked ~ label {
-    color: #ffc700;    
-  }
-  .rate:not(:checked) > label:hover,
-  .rate:not(:checked) > label:hover ~ label {
-    color: #deb217;  
-  }
-  .rate > input:checked + label:hover,
-  .rate > input:checked + label:hover ~ label,
-  .rate > input:checked ~ label:hover,
-  .rate > input:checked ~ label:hover ~ label,
-  .rate > label:hover ~ input:checked ~ label {
-    color: #c59b08;
-  }
+.mycard {
+  /* background-color: #fff; */
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #0000001c;
+  margin-bottom: 0.6rem;
+  transition: all 0.1s;
+} 
+.mycard:hover {
+  box-shadow: 1px 1px 1px #00010069;
+  background: #4d4a4a;
+}
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}

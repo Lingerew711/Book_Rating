@@ -14,6 +14,7 @@ db=scoped_session(sessionmaker(bind=engine))
 
 app = Flask(__name__)
 
+app.secret_key="1234567lingebookstore"
 #password hashing
 
 def password_hash(password):
@@ -188,6 +189,5 @@ def logout():
     session.clear()
     return render_template('login.html', message="Successfully Logout.")
 if __name__ == "__main__":
-    app.secret_key="1234567lingebookstore"
     app.run(debug = True)
 
