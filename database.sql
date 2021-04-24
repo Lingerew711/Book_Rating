@@ -5,7 +5,7 @@ CREATE TABLE "books" (
 	"year"	INTEGER NOT NULL
 );
 CREATE TABLE "users" (
-    "name" VARCHAR(50) NOT NULL.
+    "name" VARCHAR(50) NOT NULL,
 	"username" VARCHAR(50) PRIMARY KEY,
 	"password"	VARCHAR(50) NOT NULL
 );
