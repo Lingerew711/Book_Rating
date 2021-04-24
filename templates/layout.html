@@ -44,20 +44,20 @@
       <ul>
         {% if session['logged_in']%}
         <li>
-          <span class="text-light"
+          <span class="nav"
             ><i class="fa fa-user-circle fa-lg"></i>
             &nbsp;{{session['username']}}</span
           >
         </li>
         {% endif %}
-        <li><a href="{{url_for('search')}}" class="text-light">Search</a></li>
+        <li><a href="{{url_for('search')}}" class="nav">SEARCH</a></li>
         {% if not session['logged_in']%}
-        <li><a href="{{url_for('login')}}" class="text-light">Login</a></li>
+        <li><a href="{{url_for('login')}}" class="nav">LOGIN</a></li>
         <li>
-          <a href="{{url_for('register')}}" class="text-light">Sign up</a>
+          <a href="{{url_for('register')}}" class="nav">SIGN UP</a>
         </li>
         {%else%}
-        <li><a href="{{url_for('logout')}}" class="text-light">Logout</a></li>
+        <li><a href="{{url_for('logout')}}" class="nav">LOGOUT</a></li>
         {% endif %}
       </ul>
     </nav>
