@@ -44,10 +44,8 @@
       <ul>
         {% if session['logged_in']%}
         <li>
-          <span class="nav"
-            ><i class="fa fa-user-circle fa-lg"></i>
-            &nbsp;{{session['username']}}</span
-          >
+          <div class="nav mt-1"><i class="fa fa-user-circle fa-lg"></i>
+            &nbsp;{{session['username']|upper}}</div>
         </li>
         {% endif %}
         <li><a href="{{url_for('search')}}" class="nav">SEARCH</a></li>
