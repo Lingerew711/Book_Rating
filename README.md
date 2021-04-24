@@ -1,4 +1,4 @@
-# Book Rate - A book reviews app with machine learning book recommendation 
+# Book Rate - A book reviews app
 
 > Book Rate gives you an elegant UI to scroll through and search through book lists with the idea of providing reliable information about a book.
 
